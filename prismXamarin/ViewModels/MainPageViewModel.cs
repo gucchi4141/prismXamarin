@@ -1,6 +1,7 @@
 ﻿using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Commands;
+using prismXamarin.Views;
 
 namespace prismXamarin.ViewModels
 {
@@ -12,6 +13,7 @@ namespace prismXamarin.ViewModels
         {
             NavigationService = navigationService;
             ButtonLabel = new DelegateCommand(ButtonLabel_Click);
+            ButtonMyContentPage = new DelegateCommand(ButtonMyContentPage_Click);
         }
 
         public virtual void Initialize(INavigationParameters parameters)
@@ -48,6 +50,14 @@ namespace prismXamarin.ViewModels
         private void ButtonLabel_Click()
         {
             LabelButton = "ボタンが押されました";
+        }
+        #endregion
+
+        #region MyContentPageの表示ボタン
+        public DelegateCommand ButtonMyContentPage { get; set; }
+        private void ButtonMyContentPage_Click()
+        {
+            NavigationService.NavigateAsync(nameof(MyContentPage));
         }
         #endregion
     }

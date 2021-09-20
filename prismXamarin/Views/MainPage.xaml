@@ -8,5 +8,6 @@
         </Frame>
         <Label Text="{Binding LabelButton}" HorizontalTextAlignment="Center"/>
         <Button Text="Push Here" Command="{Binding ButtonLabel}"/>
+        <Button Text="My Content Pageを表示" Command="{Binding ButtonMyContentPage}"/>
     </StackLayout>
 </ContentPage>
