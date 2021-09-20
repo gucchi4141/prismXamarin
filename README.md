@@ -8,6 +8,8 @@ Visual Studio for MACではprism template packが使用（インストール）�
 * ボタンクリックの方法（記述方法）
 * ラベルのバインディング方法
 
+## 画面遷移
+ContentPageを追加して画面遷移する処理を追加します。
 
 ----
 ## リンク先
