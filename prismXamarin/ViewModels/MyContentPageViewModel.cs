@@ -1,35 +1,14 @@
-﻿using Prism.Mvvm;
+﻿using System;
+using System.Collections.Generic;
 using Prism.Navigation;
 
 namespace prismXamarin.ViewModels
 {
-    public class MyContentPageViewModel : BindableBase, IInitialize, INavigationAware, IDestructible
+    public class MyContentPageViewModel : ViewModelsBase
     {
-        protected INavigationService NavigationService { get; private set; }
-
         public MyContentPageViewModel(INavigationService navigationService)
+            :base(navigationService)
         {
-            NavigationService = navigationService;
-        }
-
-        public virtual void Initialize(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void OnNavigatedFrom(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void OnNavigatedTo(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void Destroy()
-        {
-
         }
 
         #region Message
@@ -39,6 +18,7 @@ namespace prismXamarin.ViewModels
             get => _message;
             set => SetProperty(ref _message, value);
         }
+
         #endregion
 
     }
