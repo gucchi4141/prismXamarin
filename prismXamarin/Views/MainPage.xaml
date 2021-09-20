@@ -6,5 +6,7 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White"/>
         </Frame>
+        <Label Text="{Binding LabelButton}" HorizontalTextAlignment="Center"/>
+        <Button Text="Push Here" Command="{Binding ButtonLabel}"/>
     </StackLayout>
 </ContentPage>

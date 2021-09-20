@@ -1,5 +1,6 @@
 ﻿using Prism.Mvvm;
 using Prism.Navigation;
+using Prism.Commands;
 
 namespace prismXamarin.ViewModels
 {
@@ -10,6 +11,7 @@ namespace prismXamarin.ViewModels
         public MainPageViewMode(INavigationService navigationService)
         {
             NavigationService = navigationService;
+            ButtonLabel = new DelegateCommand(ButtonLabel_Click);
         }
 
         public virtual void Initialize(INavigationParameters parameters)
@@ -31,5 +33,22 @@ namespace prismXamarin.ViewModels
         {
 
         }
+
+        #region ラベル
+        private string _labelButton = "ボタンを押すと表示が変わります";
+        public string LabelButton
+        {
+            get => _labelButton;
+            set => SetProperty(ref _labelButton, value);
+        }
+        #endregion
+
+        #region ラベルボタン
+        public DelegateCommand ButtonLabel { get; set; }
+        private void ButtonLabel_Click()
+        {
+            LabelButton = "ボタンが押されました";
+        }
+        #endregion
     }
 }
