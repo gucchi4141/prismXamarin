@@ -6,5 +6,12 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White"/>
         </Frame>
+        <Entry Text="{Binding Message}" Placeholder="何か入力してください" Margin="10"/>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Save" HorizontalOptions="FillAndExpand" Command="{Binding ButtonSave}"/>
+            <Button Text="Load" HorizontalOptions="FillAndExpand" Command="{Binding ButtonLoad}"/>
+            <Button Text="Delete" HorizontalOptions="FillAndExpand" Command="{Binding ButtonDelete}"/>
+        </StackLayout>
+        <Label Text="{Binding Result}" HorizontalOptions="CenterAndExpand"/>
     </StackLayout>
 </ContentPage>
