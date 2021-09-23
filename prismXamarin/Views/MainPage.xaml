@@ -8,6 +8,9 @@
         </Frame>
         <Label Text="{Binding LabelButton}" HorizontalTextAlignment="Center"/>
         <Button Text="Push Here" Command="{Binding ButtonLabel}"/>
+
+        <Label Text="My Content Pageに送るメッセージは、以下に入力します" HorizontalTextAlignment="Center"/>
+        <Entry Text="{Binding Msg}"/>
         <Button Text="My Content Pageを表示" Command="{Binding ButtonMyContentPage}"/>
     </StackLayout>
 </ContentPage>

@@ -32,11 +32,26 @@ namespace prismXamarin.ViewModels
         }
         #endregion
 
+        #region MyContentPageに送るメッセージ
+        private string _msg = string.Empty;
+        public string Msg
+        {
+            get => _msg;
+            set => SetProperty(ref _msg, value);
+        }
+        #endregion
+
         #region MyContentPageの表示ボタン
+
         public DelegateCommand ButtonMyContentPage { get; set; }
         private void ButtonMyContentPage_Click()
         {
-            NavigationService.NavigateAsync(nameof(MyContentPage));
+            var param = new NavigationParameters
+            {
+                { "msg", Msg}
+            };
+
+            NavigationService.NavigateAsync(nameof(MyContentPage), param);
         }
         #endregion
     }

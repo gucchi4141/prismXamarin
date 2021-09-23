@@ -4,8 +4,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="prismXamarin.Views.MyContentPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding Message}"/>
+        <StackLayout HorizontalOptions="Center" Margin="20">
+            <Label Text="{Binding Message}" HorizontalTextAlignment="Center"/>
+            <Label Text="下の表示は、MainPageから渡されたメッセージです" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding MainPageMsg}" HorizontalTextAlignment="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

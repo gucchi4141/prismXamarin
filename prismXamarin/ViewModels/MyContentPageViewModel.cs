@@ -18,8 +18,20 @@ namespace prismXamarin.ViewModels
             get => _message;
             set => SetProperty(ref _message, value);
         }
-
         #endregion
 
+        #region メイン画面からのメッセージ
+        private string _mainPageMsg = string.Empty;
+        public string MainPageMsg
+        {
+            get => _mainPageMsg;
+            set => SetProperty(ref _mainPageMsg, value);
+        }
+        #endregion
+
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            MainPageMsg = parameters["msg"].ToString();
+        }
     }
 }
