@@ -4,7 +4,9 @@
              x:Class="prismXamarin.Views.MainPage">
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White"/>
+            <Label Text="カメラを使うサンプルアプリ" HorizontalTextAlignment="Center" TextColor="White"/>
         </Frame>
+        <Button Text="写真撮影" Command="{Binding ButtonPicture}"/>
+        <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding ImagePicture}" Margin="20"/>
     </StackLayout>
 </ContentPage>
